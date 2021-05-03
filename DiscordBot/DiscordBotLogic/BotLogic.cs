@@ -26,8 +26,6 @@ namespace DiscordBot.DiscordBotLogic
             HtmlDocument doc = web.Load(url);
 
             string result = doc.DocumentNode.SelectNodes("//*[@id=\"app\"]/main/div/div[7]/div/table/tbody/tr[1]/td[1]/b" )[0].InnerText;           
-            string map = doc.DocumentNode.SelectNodes("//*[@id=\"app\"]/main/div/div[7]/div/table/tbody/tr[1]/td[8]")[0].InnerText;
-            string results = doc.DocumentNode.SelectNodes("//*[@id=\"app\"]/main/div/div[7]/div/table/tbody/tr[1]")[0].InnerText;
 
             return result;
         }
